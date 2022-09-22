@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useCallback } from 'react'
+import React from 'react'
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable'
+import { buildDavid } from '../../constants' 
 
 const Button = (props) => {
     const {
@@ -14,11 +15,13 @@ const Button = (props) => {
                 color: pressed ? 'black' : 'white'
             }, styles.buttonText]}>{title}</Text>
         )
-}
+    }
+
+    const color = buildDavid ? '#1E6DB6' : '#234f77';
 
     return (
     <Pressable style={({ pressed }) => [
-        { backgroundColor: pressed ? 'white' : '#1E6DB6' },
+        { backgroundColor: pressed ? 'white' : color },
         styles.button,
     ]} onPress={onPress}>
         {RenderButtonText}
@@ -35,11 +38,12 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 12,
+        paddingVertical: 10,
         paddingHorizontal: 32,
         borderRadius: 20,
         elevation: 5,
         alignSelf: 'center',
+        marginTop: 5,
     }
 })
 
