@@ -1,10 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Linking, PixelRatio, Image } from 'react-native'
+import { StyleSheet, Text, View, Linking, PixelRatio, Image, Dimensions } from 'react-native'
 import { useFonts } from 'expo-font';
 import Button from '../components/Button/Button';
 import LogoDavid from '../../assets/TraumaDep.png';
 import LogoIvan from '../../assets/TCCompleto.png';
 import { buildDavid } from '../constants';
+
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 
 const HomeScreen = () => {
 
