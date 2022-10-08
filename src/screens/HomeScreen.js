@@ -6,8 +6,8 @@ import LogoDavid from '../../assets/TraumaDep.png';
 import LogoIvan from '../../assets/TCCompleto.png';
 import { buildDavid } from '../constants';
 
-const width = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
+const deviceHeight = Dimensions.get('window').height;
 
 const HomeScreen = () => {
 
@@ -31,8 +31,8 @@ const HomeScreen = () => {
         <Text style={styles.mainName}>Dr. Iván Campos Hernández</Text>;
 
     const Speciality = buildDavid ? 
-        <Text style={styles.specialityText}>Alta especialidad en artroscopia y lesiones deportivas</Text>
-    :  <Text style={styles.specialityText}>Subespecialidad en Pediatria</Text>;
+        <Text style={styles.specialityText}>Alta especialidad en artroscopía y lesiones deportivas</Text>
+    :  <Text style={styles.specialityText}>Alta especialidad en ortopedía pediátria</Text>;
 
 
     return (
@@ -45,7 +45,9 @@ const HomeScreen = () => {
                 <Text style={styles.specialityText}>Traumatología y Ortopedia</Text>
                 {Speciality}
             </View>
-            <Image source={buildDavid ? LogoDavid : LogoIvan} style={styles.image} />
+            <View style={styles.imageView}>
+                <Image source={buildDavid ? LogoDavid : LogoIvan} style={styles.image} />
+            </View>
             <View style={styles.emptyMiddleMainView} />
             <Text style={styles.buttonLabel}>¿Necesitas atención urgente?</Text>
             <Button title='Emergencias' onPress={callEmergency} />
@@ -62,29 +64,32 @@ export default HomeScreen
 const styles = StyleSheet.create({
     mainView: {
         justifyContent: 'center',
+        display: 'flex',
+        width: '100%'
     },
     emptyTopMainView: {
-        flex: 2
+        height: '10%'
     },
     mainNameView: {
         backgroundColor: buildDavid ? '#1E6DB6' : '#234f77',
         borderRadius: 10,
-        flex: 4,
-        width: '100%',
+        width: deviceWidth < 500 ? '90%' : '70%',
+        height: '10%',
         justifyContent: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        textAlign: 'center'
     },
     mainName: {
         fontFamily: 'Raleway',
-        fontSize: PixelRatio.get() * 9,
+        fontSize: deviceWidth < 500 ? PixelRatio.get() * 9 : PixelRatio.get() * 20,
         paddingHorizontal: 20,
         color: 'white',
         fontWeight: 'bold',
+        textAlign: 'center'
     },
     specialityView: {
         borderColor: 'black',
         alignSelf: 'center',
-        flex: 4,
         padding: 10,
         borderRadius: 5,
         marginTop: PixelRatio.get() * 5,
@@ -93,40 +98,49 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 2, height: 3 },
         shadowOpacity: .4,
         shadowRadius: 5,
-        width: '100%',
-        backgroundColor: 'white'
+        width: deviceWidth < 500 ? '80%' : '60%',
+        backgroundColor: 'white',
+        height: '15%',
+        alignContent: 'center' 
     },
     specialityText: {
         color: '#1E6DB6',
         fontWeight: '300',
-        fontSize: PixelRatio.get() * 6,
-        flex: 1,
+        fontSize: deviceWidth < 500 ? PixelRatio.get() * 7 : PixelRatio.get() * 12,
+        height: '60%',
         textAlign: 'center',
         marginHorizontal: 10,
     },
     emptyMiddleMainView: {
-        flex: 6
+        height: '25%'
     },
     buttonLabel: {
         fontFamily: 'Raleway',
-        fontSize: PixelRatio.get() * 10,
+        fontSize:  deviceWidth < 500 ? PixelRatio.get() * 10 : PixelRatio.get() * 20,
         marginTop: 10,
-        flex: 3,
+        marginBottom: 15,
         marginLeft: 5,
-        width: PixelRatio.getPixelSizeForLayoutSize(120),
+        width: '100%',
+        textAlign: 'center'
     },
     emptySecondaryView: {
-        flex: 1
+        height: '5%'
     },
     emptyBottomView: {
-        flex: 1
+        height: '5%'
+    },
+    imageView: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     image: {
         opacity: 0.7,
-        width: PixelRatio.get() * 100,
-        position: 'absolute',
-        top: PixelRatio.get() === 2.75 ? PixelRatio.get() * 60 : PixelRatio.get() * 6,
-        left: PixelRatio.get() === 2.75 ? PixelRatio.get() * 10 : PixelRatio.get() * 20,
+        width: deviceWidth < 500 ? PixelRatio.get() * 100 : PixelRatio.get() * 170,
         resizeMode: 'contain'
     }
 })
