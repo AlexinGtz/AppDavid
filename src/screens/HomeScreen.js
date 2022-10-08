@@ -7,7 +7,6 @@ import LogoIvan from '../../assets/TCCompleto.png';
 import { buildDavid } from '../constants';
 
 const deviceWidth = Dimensions.get('window').width;
-const deviceHeight = Dimensions.get('window').height;
 
 const HomeScreen = () => {
 

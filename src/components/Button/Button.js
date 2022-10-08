@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, Dimensions } from 'react-native'
 import React from 'react'
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable'
 import { buildDavid } from '../../constants' 
+
+const deviceWidth = Dimensions.get('window').width;
 
 const Button = (props) => {
     const {
@@ -31,16 +33,15 @@ const Button = (props) => {
 
 const styles = StyleSheet.create({
     buttonText: {
-        fontFamily: 'Raleway',
-        fontSize: 20,
-        fontWeight: 'bold'
+        fontFamily: 'RobotoBold',
+        fontSize: deviceWidth < 500 ? 20 : 40,
     },
     button: {
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 10,
         paddingHorizontal: 32,
-        borderRadius: 20,
+        borderRadius: deviceWidth < 500 ? 20 : 30,
         elevation: 5,
         alignSelf: 'center',
         marginTop: 5,
