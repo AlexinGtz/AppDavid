@@ -12,7 +12,8 @@ const deviceHeight = Dimensions.get('window').height;
 const HomeScreen = () => {
 
     const [loaded] = useFonts({
-        Raleway: require('../../assets/fonts/Raleway.ttf'),
+        RobotoReg: require('../../assets/fonts/Roboto-Light.ttf'),
+        RobotoBold: require('../../assets/fonts/Roboto-Bold.ttf'),
     });
 
     if (!loaded) {
@@ -80,11 +81,10 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     mainName: {
-        fontFamily: 'Raleway',
+        fontFamily: 'RobotoBold',
         fontSize: deviceWidth < 500 ? PixelRatio.get() * 9 : PixelRatio.get() * 20,
         paddingHorizontal: 20,
         color: 'white',
-        fontWeight: 'bold',
         textAlign: 'center'
     },
     specialityView: {
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         height: '25%'
     },
     buttonLabel: {
-        fontFamily: 'Raleway',
+        fontFamily: 'RobotoReg',
         fontSize:  deviceWidth < 500 ? PixelRatio.get() * 10 : PixelRatio.get() * 20,
         marginTop: 10,
         marginBottom: 15,
