@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     mainNameView: {
         backgroundColor: buildDavid ? '#1E6DB6' : '#234f77',
         borderRadius: 10,
-        width: deviceWidth < 500 ? '90%' : '70%',
+        width: deviceWidth < 501 ? '90%' : '70%',
         height: '10%',
         justifyContent: 'center',
         alignSelf: 'center',
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     },
     mainName: {
         fontFamily: 'RobotoBold',
-        fontSize: deviceWidth < 500 ? PixelRatio.get() * 9 : PixelRatio.get() * 20,
+        fontSize: deviceWidth < 501 ? PixelRatio.get() * 9 : PixelRatio.get() * 20,
         paddingHorizontal: 20,
         color: 'white',
         textAlign: 'center'
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 2, height: 3 },
         shadowOpacity: .4,
         shadowRadius: 5,
-        width: deviceWidth < 500 ? '80%' : '60%',
+        width: deviceWidth < 501 ? '80%' : '60%',
         backgroundColor: 'white',
         height: '15%',
         alignContent: 'center' 
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     specialityText: {
         color: '#1E6DB6',
         fontWeight: '300',
-        fontSize: deviceWidth < 500 ? PixelRatio.get() * 7 : PixelRatio.get() * 12,
+        fontSize: deviceWidth < 501 ? PixelRatio.get() * 7 : PixelRatio.get() * 12,
         height: '60%',
         textAlign: 'center',
         marginHorizontal: 10,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     },
     buttonLabel: {
         fontFamily: 'RobotoReg',
-        fontSize:  deviceWidth < 500 ? PixelRatio.get() * 10 : PixelRatio.get() * 20,
+        fontSize:  deviceWidth < 501 ? PixelRatio.get() * 10 : PixelRatio.get() * 20,
         marginTop: 10,
         marginBottom: 15,
         marginLeft: 5,
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     },
     image: {
         opacity: 0.7,
-        width: deviceWidth < 500 ? PixelRatio.get() * 100 : PixelRatio.get() * 170,
+        width: deviceWidth < 501 ? PixelRatio.get() * 100 : PixelRatio.get() * 170,
         resizeMode: 'contain'
     }
 })

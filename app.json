@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "DavidApp",
-    "slug": "DavidApp",
-    "version": "1.0.0",
+    "name": "Traumas & Lesiones",
+    "slug": "traumasLesiones",
+    "version": "0.2.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/LogoDavid.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/LogoDavid.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,19 +19,28 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.alexgtz.davidapp",
-      "buildNumber": "0.1.0"
+      "bundleIdentifier": "com.alexgtz96.traumasLesiones",
+      "buildNumber": "0.1.0",
+      "icon": "./assets/LogoDavid.png"
     },
     "android": {
-      "package": "com.alexgtz.davidapp",
-      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/LogoDavid.png",
+        "backgroundColor": "#FFFFFF",
+        "versionCode": 2
+      },
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ],
+      "package": "com.alexgtz96.traumasLesiones"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/LogoDavid.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f68aab77-f1ec-4d65-a9b3-b09b693206e6"
+      }
     }
   }
 }
