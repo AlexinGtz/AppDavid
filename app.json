@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Traumas & Lesiones",
+    "name": "Tu Trauma de Confianza",
     "slug": "traumasLesiones",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/LogoDavid.png",
     "userInterfaceStyle": "light",
@@ -19,20 +19,20 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.alexgtz96.traumasLesiones",
-      "buildNumber": "0.1.0",
+      "bundleIdentifier": "com.alexgtz96.traumaLesiones",
+      "buildNumber": "1.0.0",
       "icon": "./assets/LogoDavid.png"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/LogoDavid.png",
-        "backgroundColor": "#FFFFFF",
-        "versionCode": 2
+        "backgroundColor": "#FFFFFF"
       },
       "permissions": [
         "com.google.android.gms.permission.AD_ID"
       ],
-      "package": "com.alexgtz96.traumasLesiones"
+      "package": "com.alexgtz96.traumaLesiones",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/LogoDavid.png"
